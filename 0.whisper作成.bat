@@ -1,43 +1,52 @@
 @echo off
-@rem ‹N“®‘O‚Éanaconda git‚ğƒCƒ“ƒXƒg[ƒ‹
+@rem èµ·å‹•å‰ã«anaconda gitã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+@rem å¿µã®ç‚ºç®¡ç†è€…æ¨©é™ã§å®Ÿè¡Œ
 
 echo ---------------------------------------------------------------------------
-echo whisper ŠÂ‹«ì¬
+echo conda ã‚¢ãƒ—ãƒ‡
 echo ---------------------------------------------------------------------------
-@rem whisper‚ğì¬
+@rem 	anacondaã‚¢ãƒ—ãƒ‡
+echo Y | conda update -n base conda
+echo Y | conda update --all
+echo ---------------------------------------------------------------------------
+
+echo ---------------------------------------------------------------------------
+echo whisper ç’°å¢ƒä½œæˆ
+echo ---------------------------------------------------------------------------
+@rem whisperã‚’ä½œæˆ
 echo Y | call conda create -n whisper
 echo ---------------------------------------------------------------------------
 
-echo whisper ŠÂ‹«‹N“®
+echo whisper ç’°å¢ƒèµ·å‹•
 echo ---------------------------------------------------------------------------
-@rem anaconda/miniconda wisper‹N“®
+@rem anaconda/miniconda whisperèµ·å‹•
 echo Y | call conda activate whisper
 echo ---------------------------------------------------------------------------
 
-echo FX‚ÆƒCƒ“ƒXƒg[ƒ‹
+echo è‰²ã€…ã¨ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 echo ---------------------------------------------------------------------------
-@rem FXƒCƒ“ƒXƒg[ƒ‹
-echo Y | call conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
+@rem è‰²ã€…ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+echo Y | call conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
 echo ---------------------------------------------------------------------------
 
-echo ffmpegƒCƒ“ƒXƒg[ƒ‹
+echo ffmpegã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 echo ---------------------------------------------------------------------------
-@rem ffmpeg‚ğƒCƒ“ƒXƒg[ƒ‹
+@rem ffmpegã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 echo Y | call conda install ffmpeg -c conda-forge
 echo ---------------------------------------------------------------------------
 
-echo github‚©‚çwhisperƒ_ƒEƒ“ƒ[ƒh
+echo githubã‹ã‚‰whisperãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰
 echo ---------------------------------------------------------------------------
-@rem whisper‚ğƒ_ƒEƒ“ƒ[ƒhEƒCƒ“ƒXƒg[ƒ‹
+@rem whisperã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ»ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 echo Y | call pip install git+https://github.com/openai/whisper.git
 echo ---------------------------------------------------------------------------
 
-echo ƒCƒ“ƒXƒg[ƒ‹Š®—¹Iƒoƒbƒ`ƒtƒ@ƒCƒ‹‚É•ÏŠ·‚µ‚½‚¢ƒtƒ@ƒCƒ‹‚ğƒhƒƒbƒv‚µ‚Ä‰º‚³‚¢I
+echo ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å®Œäº†ï¼ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã«å¤‰æ›ã—ãŸã„ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ‰ãƒ­ãƒƒãƒ—ã—ã¦ä¸‹ã•ã„ï¼
 echo ---------------------------------------------------------------------------
 
 pause
 exit
 
-@rem 10/21 v1.00
-@rem QlƒTƒCƒg
+@rem 22/12/05 v1.10
+@rem å‚è€ƒã‚µã‚¤ãƒˆ
 @rem https://tadaoyamaoka.hatenablog.com/entry/2022/09/23/140401
